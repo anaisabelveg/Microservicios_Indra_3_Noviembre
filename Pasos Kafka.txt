@@ -5,9 +5,13 @@ Abrir un cmd de Windows con permisos de administrador
 	bin\windows\zookeeper-server-start.bat config\zookeeper.properties
 	C:\Kafka>bin\windows\zookeeper-server-start.bat config\zookeeper.properties
 
+	C:\Kafka\bin\windows>zookeeper-server-start.bat ..//..//config//zookeeper.properties
+
 2.- Arrancar un broker de Apache Kafka:
 	bin\windows\kafka-server-start.bat config\server.properties
 	C:\Kafka>bin\windows\kafka-server-start.bat config\server.properties
+
+	C:\Kafka\bin\windows>kafka-server-start.bat ..//..//config//server.properties
 
 3.- Ahora queremos crear un cluster, como ya tenemos arrancado un broker de kafka,
 	vamos a crear y arrancar otros 2
@@ -25,5 +29,10 @@ Abrir un cmd de Windows con permisos de administrador
 	bin\windows\kafka-server-start.bat config\server1.properties
 	bin\windows\kafka-server-start.bat config\server2.properties
 
+	C:\Kafka\bin\windows>kafka-server-start.bat ..//..//config//server1.properties
+	C:\Kafka\bin\windows>kafka-server-start.bat ..//..//config//server2.properties
+
 4.- Crear un topic con 2 particiones y factor de replicacion 3 llamado indra-cluster
 	bin\windows\kafka-topics.bat --create --topic indra-cluster --bootstrap-server localhost:9092 --replication-factor 3 --partitions 2
+
+	C:\Kafka\bin\windows>kafka-topics.bat --create --topic indra-cluster --bootstrap-server localhost:9092 --replication-factor 3 --partitions 2
